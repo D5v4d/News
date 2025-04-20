@@ -1,0 +1,177 @@
+@use "./mixin.scss" as *;
+
+.News {
+    @include bordered-box(rgba(255, 255, 255, 0.3), 10px, 15px);
+    margin: 15px;
+}
+
+.count,
+.day,
+.achieved,
+.DuplicatesNumber {
+    color: $text-white;
+}
+
+.Header {
+    @include flex-center();
+
+    .Info {
+        .reach {
+            padding: 0 20px;
+        }
+
+        .Traffic {
+            display: inline;
+        }
+    }
+}
+
+.Actions {
+    @include flex-center(space-between);
+    gap: 20px;
+}
+
+.InfoOutlined,
+.Square {
+    @include button-reset();
+    border: 2px solid white;
+    width: 25px;
+    height: 25px;
+}
+
+.InfoOutlined {
+    padding-left: 3px;
+}
+
+.Title {
+    a {
+        color: rgb(33, 137, 255);
+        text-decoration: none;
+        font-weight: 400;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.AuthorSvg {
+    @include absolute-icon(20px, 20px, 1px, -22px);
+}
+
+.ContentInfo {
+    @include flex-center(flex-start);
+    margin-left: 20px;
+    gap: 20px;
+
+    span:nth-child(3) {
+        padding: 0 20px;
+    }
+
+    span:first-child {
+        a {
+            color: rgb(33, 137, 255);
+        }
+    }
+}
+
+.WebsitesSvg {
+    @include absolute-icon(20px, 20px, 4px, -21px);
+}
+
+.FranceSvg {
+    width: 18px;
+    height: 11px;
+    padding-right: 5px;
+}
+
+.LanguageSvg {
+    @include absolute-icon(20px, 18px, 4px, -23px);
+}
+
+.Highlights {
+    color: $text-white;
+    font-size: 18px;
+    margin-bottom: 5px;
+
+    .UniqueText {
+        background-color: #2456ff;
+        padding: 3px 7px;
+        border-radius: 10px;
+    }
+}
+
+.ShowMore,
+.SeeAll {
+    @include button-reset();
+    color: #2456ff;
+    font-size: 18px;
+    padding-left: 0;
+}
+
+.Tags {
+    @include flex-center(flex-start);
+    gap: 15px;
+    margin-top: 15px;
+
+    .Tag {
+        @include tag-style();
+    }
+}
+
+.OriginalSource {
+    @include bordered-box(#3b3939, 10px, 2px);
+    height: 40px;
+    color: #2456ff;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 30px 0 35px;
+    background-color: #3b3939;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.Duplicates {
+    @include flex-center();
+    margin-bottom: 15px;
+
+    span {
+        font-size: 18px;
+    }
+
+    button {
+        @include button-reset();
+        color: gray;
+        font-size: 18px;
+
+        span {
+            color: #ffffff;
+        }
+    }
+}
+
+.Ddetails {
+    @include bordered-box(#527aff, 10px, 20px);
+
+    .Iinfo {
+        font-size: 18px;
+        @include flex-center();
+
+        span:first-child {
+            margin-right: 20px;
+        }
+    }
+}
+
+.ViewDuplicates {
+    @include button-reset();
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-top: 25px;
+    cursor: pointer;
+}
